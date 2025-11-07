@@ -1,31 +1,57 @@
-Marks Converter Program
-📘 Overview
+<!-- PROJECT LOGO -->
+<p align="center">
+  <img src="https://img.icons8.com/color/96/c-programming.png" width="90" alt="C Language Logo">
+</p>
 
-This is a simple C program that converts a student's marks from one scale to another.
-For example, if you scored 25 out of 50, and you want to know how much that would be out of 100, this program performs that conversion automatically.
+<h1 align="center">📘 Marks Converter Program</h1>
 
-🧮 How It Works
+<p align="center">
+  <i>A simple yet powerful C program to convert marks from one scale to another — quickly and accurately.</i>
+</p>
 
-The program:
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/Language-C-blue?logo=c&logoColor=white" alt="C Badge"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Compiler-GCC-green?logo=gnu&logoColor=white" alt="GCC Badge"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Platform-Cross--Platform-orange" alt="Platform Badge"></a>
+  <a href="#"><img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License Badge"></a>
+</p>
 
-Takes three inputs from the user:
+---
 
-The marks obtained (a)
+## 🧠 Overview
 
-The total marks of the exam (b)
+**Marks Converter Program** is a simple **C language utility** that converts a student's marks from one scale to another.  
+For example, if you score `25` out of `50` and want to know your equivalent marks **out of 100**, this program does the conversion automatically!
 
-The desired scale you want to convert the marks into (i)
-(for example, converting marks out of 30 or 50 to marks out of 100)
+It’s a neat mini project demonstrating:
+- Input/output handling in C
+- Arithmetic operations
+- Basic use of variables and data types
+- Ratio-based scaling
 
-It calculates:
+---
 
-The difference between total and obtained marks (markscut)
+## 🧮 How It Works
 
-The conversion ratio (flow)
+The program performs the following steps:
 
-The equivalent marks on the new scale (finalmarks)
+1️⃣ **Takes three inputs**:
+   - Marks obtained → `a`  
+   - Total marks of the exam → `b`  
+   - Target scale (the scale you want to convert to) → `i`
 
-💻 Code Explanation
+2️⃣ **Calculates**:
+   - Marks cut off → `markscut = b - a`  
+   - Conversion ratio → `flow = (float)b / i`  
+   - Equivalent marks → `finalmarks = i - (markscut / flow)`
+
+3️⃣ **Outputs** your marks on the new scale.
+
+---
+
+## 💻 Code Example
+
+```c
 #include <stdio.h>
 #include <conio.h>
 
@@ -50,38 +76,46 @@ int main() {
     printf("Your marks are: %d", finalmarks);
     return 0;
 }
-
-🧠 Example
-
+🧠 Example Execution
 Input:
 
-Enter your marks: 
-25
-Enter marks which you got out of (e.g., out of 30, 40, 50): 
-50
-Enter marks in which you want to get converted: 
-100
-
-
+plaintext
+Copy code
+Enter your marks: 25
+Enter marks which you got out of (e.g., out of 30, 40, 50): 50
+Enter marks in which you want to get converted: 100
 Output:
 
+plaintext
+Copy code
 Your marks are: 50
+✅ In this example, 25/50 converts proportionally to 50/100.
 
 ⚙️ Compilation & Execution
-Using GCC
+🧰 Using GCC (Linux/Mac/Windows)
+bash
+Copy code
 gcc marks_converter.c -o marks_converter
 ./marks_converter
-
-Using Turbo C (Windows)
-
+🧮 Using Turbo C (Windows)
 Open the program in Turbo C.
 
-Compile and run using Ctrl + F9.
+Compile using Alt + F9
 
-🧾 Notes
+Run using Ctrl + F9
 
-This program uses simple arithmetic to scale marks.
+👨‍💻 Author
 
-The use of <conio.h> is optional — it’s only needed if you plan to use getch() for pausing the screen (not required here).
+Developed by:
+🧑‍💻 Shivaditya
+🎓 B.Tech CSE (AIML), SRM Institute of Science & Technology, NCR Campus
+📧 shivaditya2005@gmail.com
 
-You can extend this program to handle float inputs for more precision.
+🔗 GitHub Profile
+
+🪪 License
+
+This project is licensed under the MIT License — free to use, modify, and distribute with credit.
+
+```
+<p align="center"> <img src="https://img.icons8.com/color/96/c-programming.png" width="70" alt="C Logo"> </p> <h3 align="center">"Scaling your marks, one formula at a time."</h3> <p align="center"> <a href="https://github.com/SHIVADITYA2005/Marks-Converter-Program"> <img src="https://img.shields.io/github/stars/SHIVADITYA2005/Marks-Converter-Program?style=social" alt="GitHub stars"> </a> <a href="https://github.com/SHIVADITYA2005/Marks-Converter-Program/fork"> <img src="https://img.shields.io/github/forks/SHIVADITYA2005/Marks-Converter-Program?style=social" alt="GitHub forks"> </a> </p> ```
